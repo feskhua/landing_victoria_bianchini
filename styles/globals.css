@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #000;
+  --foreground: #171717;
+  --text: #ffffff;
+  --accent: #E11F28;
+}
+
+html {
+  font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+  color: var(--foreground);
+  background: #fff;
+}
+
+h1 {
+  font-family: 'Bebas Neue', 'sans-serif';
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

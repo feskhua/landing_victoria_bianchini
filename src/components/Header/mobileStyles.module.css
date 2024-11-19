@@ -1,0 +1,82 @@
+.header {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    padding: 12px 20px;
+    backdrop-filter: blur(30px);
+    overflow-x: hidden;
+}
+
+.header.open {
+    height: 100dvh;
+    align-items: flex-start;
+}
+
+.topToolbar {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.menu {
+    position: absolute;
+    right: -110%;
+    top: 100px;
+    transition: right 0.3s ease;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.menu.open {
+    right: 0;
+}
+
+.menuList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.menuLink {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--text);
+}
+
+.list {
+    display: flex;
+    gap: 8px;
+    margin: 0 auto;
+}
+
+.button {
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.button.open {
+    transform: rotate(-90deg);
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 12px 10px;
+    }
+
+    .button {
+        margin-left: 10px;
+    }
+
+    .logo svg {
+        width: 100px;
+    }
+}

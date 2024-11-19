@@ -1,0 +1,45 @@
+.actionLink {
+    padding: 11px 20px 11px 44px;
+    background-color: var(--accent);
+    color: var(--text);
+    position: relative;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.lg {
+    padding: 16px 24px 16px 56px;
+    font-size: 16px;
+}
+
+.actionLink:hover {
+    opacity: 0.7;
+}
+
+.actionLink::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('/icons/heart.svg');
+}
+
+.lg::before {
+    left: 24px;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+    .actionLink {
+        padding: 6px 10px 6px 44px;
+    }
+}
